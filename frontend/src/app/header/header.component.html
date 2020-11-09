@@ -1,0 +1,39 @@
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="background-color: black;">
+  <a class="navbar-brand" href="#">
+   <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
+
+      Al Hajj Application
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li *ngIf="buttonFlag" class="nav-item" style="margin-right: 30px; margin-top: 8px; color: white;">
+            <em>Bienvenue {{username}}</em>
+      </li>
+      <li *ngIf="user" class="nav-item">
+          <button class="btn btn-info">
+              <a href="userpanel">Home</a>
+          </button>
+      </li>
+      <li *ngIf="admin" class="nav-item">
+          <button class="btn btn-info">
+              <a href="adminpanel">Home</a>
+          </button>
+      </li>
+      <li *ngIf="!buttonFlag" class="nav-item">
+          <button class="btn btn-success">
+              <a href="login">Se connecter</a>
+          </button>
+      </li>
+      <li *ngIf="buttonFlag" class="nav-item">
+          <button class="btn btn-danger">
+              <a href="logout">Déconnecter</a>
+          </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- HEADER -->
